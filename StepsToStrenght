@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepsToStrength</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .quote-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #2d3e50;
+        }
+        p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #555;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>StepsToStrength by Vince Aaron Francisco</h1>
+    <div class="quote-container">
+        <p id="quote">Click the button to get a motivational quote!</p>
+        <button onclick="getRandomQuote()">Get Quote</button>
+    </div>
+
+    <script>
+        // Array of motivational quotes
+        const quotes = [
+            "The only way to do great work is to love what you do. – Steve Jobs",
+            "Believe you can and you're halfway there. – Theodore Roosevelt",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+            "It always seems impossible until it's done. – Nelson Mandela",
+            "Don't watch the clock; do what it does. Keep going. – Sam Levenson",
+            "You are never too old to set another goal or to dream a new dream. – C.S. Lewis",
+            "Everything you’ve ever wanted is on the other side of fear. – George Addair",
+            "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+            "Hardships often prepare ordinary people for an extraordinary destiny. – C.S. Lewis",
+            "The best time to plant a tree was 20 years ago. The second best time is now. – Chinese Proverb"
+        ];
+
+        // Function to get a random quote
+        function getRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
